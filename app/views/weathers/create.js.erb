@@ -1,0 +1,7 @@
+<% if @weather %>
+  $("#weather-info").html("<p><%= @weather %></p>");
+<% else %>
+  $("#weather-info").html(`<p>No Weather information found for this city <%= @city %></p>`);
+<% end %>
+$('#city-input').val('');
+$('#submit-button').prop('disabled', false);
